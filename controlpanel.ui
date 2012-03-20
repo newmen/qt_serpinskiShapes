@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ControlPanel</class>
+ <widget class="QWidget" name="ControlPanel">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>65</width>
+    <height>309</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>1</y>
+     <width>65</width>
+     <height>307</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_3">
+    <item>
+     <layout class="QVBoxLayout" name="cornersVerticalLayout">
+      <item>
+       <widget class="QLabel" name="cornersLabel">
+        <property name="text">
+         <string>Кол-во
+углов</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QSpinBox" name="cornersSpinBox">
+        <property name="minimum">
+         <number>3</number>
+        </property>
+        <property name="maximum">
+         <number>6</number>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QSlider" name="cornersVerticalSlider">
+        <property name="minimum">
+         <number>3</number>
+        </property>
+        <property name="maximum">
+         <number>6</number>
+        </property>
+        <property name="pageStep">
+         <number>3</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="rotateVerticalLayout">
+      <item>
+       <widget class="QLabel" name="rotateLabel">
+        <property name="text">
+         <string>Поворот</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QSpinBox" name="rotateSpinBox">
+        <property name="maximum">
+         <number>180</number>
+        </property>
+        <property name="singleStep">
+         <number>10</number>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QSlider" name="rotateVerticalSlider">
+        <property name="maximum">
+         <number>180</number>
+        </property>
+        <property name="singleStep">
+         <number>10</number>
+        </property>
+        <property name="pageStep">
+         <number>30</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>cornersVerticalSlider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>cornersSpinBox</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>12</x>
+     <y>80</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>11</x>
+     <y>48</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cornersSpinBox</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>cornersVerticalSlider</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>54</x>
+     <y>54</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>12</x>
+     <y>101</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rotateVerticalSlider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>rotateSpinBox</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>13</x>
+     <y>221</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>11</x>
+     <y>201</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rotateSpinBox</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>rotateVerticalSlider</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>55</x>
+     <y>200</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>248</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
