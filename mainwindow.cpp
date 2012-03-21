@@ -3,9 +3,9 @@
 
 MainWindow::MainWindow() {
     _serpinsiShapeRenderer = new SerpinskiShape(this);
-    _serpinsiShapeRenderer->setGeometry(0, 0, 615, 550);
+    _serpinsiShapeRenderer->setGeometry(0, 0, 600, 550);
     _controlPanel = new ControlPanel(this);
-    _controlPanel->setGeometry(615, 0, 70, 550);
+    _controlPanel->setGeometry(600, 100, 80, 550);
 
 //    QHBoxLayout *hLayout = new QHBoxLayout();
 //    hLayout->addWidget(_serpinsiShapeRenderer);
