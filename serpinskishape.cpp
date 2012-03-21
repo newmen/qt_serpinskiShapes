@@ -62,7 +62,7 @@ void SerpinskiShape::drawShape(QPainter &painter, float cx, float cy, float radi
         nextRadius = radius * 0.333;
         break;
     case 5:
-        nextRadius = radius / 2.6;
+        nextRadius = radius / 2.63;
         break;
     }
 
